@@ -17,6 +17,7 @@ rm code.tar.gz data.tar.gz
 ```
 ## Detectron2 설치
 ```bash
+cd baseline
 python -m pip install -e detectron2  #detectron2 에 있는 setup.py, setup.cfg를 이용하여 필요한 패키지들을 자동으로 다운받아줍니다.
 ```
 
