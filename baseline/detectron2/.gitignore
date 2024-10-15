@@ -30,7 +30,6 @@ wheels/
 model_ts*.txt
 
 # ipython/jupyter notebooks
-*.ipynb
 **/.ipynb_checkpoints/
 
 # Editor temporaries
