@@ -1,6 +1,9 @@
 ## 
 .flake8
 .netrc
+.bash_history
+.gitconfig
+.viminfo
 *.lock
 dataset/*
 wandb
