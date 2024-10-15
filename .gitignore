@@ -1,7 +1,11 @@
 ## 
 .flake8
+.netrc
 *.lock
 dataset/*
+wandb
+checkpoints
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,python,windows
