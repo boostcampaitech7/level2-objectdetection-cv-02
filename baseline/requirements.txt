@@ -11,3 +11,4 @@ map-boxes==1.0.5
 jupyter==1.0.0
 openmim
 mmcv-full==1.7.0
+black==23.12.0
