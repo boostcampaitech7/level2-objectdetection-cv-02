@@ -257,3 +257,11 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python,windows
+
+#ultralytics 실행으로 인해서 생길 수 있는 폴더 무시.
+baseline/ultralytics/**/*.pt
+baseline/ultralytics/*runs/
+baseline/ultralytics/*.csv
+baseli
+runs/
+
