@@ -1,6 +1,6 @@
 _base_ = [
           # './models/customize_example.py',
-          '../swin/mask_rcnn_swin-t-p4-w7_fpn_ms-crop-3x_coco.py',
+          '../swin/cascade_rcnn_swin-t-p4-w7_fpn_ms-crop-3x_coco.py',
           'customize_datasets.py', 
           # 'customize_schedule.py', 
           'customize_runtime.py']
@@ -27,5 +27,3 @@ lr_config = dict(
     step=[27, 33]) # step은 얼마마다 밟는지
 # lr_config = dict(warmup_iters=1000, step=[27, 33])
 runner = dict(type='EpochBasedRunner', max_epochs=36)
-
-# swin/mask_rcnn_swin-t-p4-w7_fpn_ms-crop-3x_coco.py

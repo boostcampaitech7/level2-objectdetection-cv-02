@@ -4,10 +4,14 @@
 .bash_history
 .gitconfig
 .viminfo
+.local
+.config
 *.lock
 dataset/*
 wandb
 checkpoints
+assignments
+sample_submission
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python,windows

@@ -9,7 +9,7 @@ img_norm_cfg = dict(
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='LoadAnnotations', with_bbox=True),
-    dict(type='Resize', img_scale=(512,512), keep_ratio=True), ## image size 변경 
+    dict(type='Resize', img_scale=(1024,1024), keep_ratio=True), ## image size 변경 
     dict(type='RandomFlip', flip_ratio=0.5),
     dict(type='Normalize', **img_norm_cfg),
     dict(type='Pad', size_divisor=32),
@@ -20,7 +20,7 @@ test_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(
         type='MultiScaleFlipAug',
-        img_scale=(512,512), ## image size 변경 
+        img_scale=(1024,1024), ## image size 변경 
         flip=False,
         transforms=[
             dict(type='Resize', keep_ratio=True),
@@ -41,7 +41,7 @@ data = dict(
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
-        ann_file=data_root + '/train.json', ## validation annotation file 위치
+        ann_file=data_root + '/val_split.json', ## validation annotation file 위치
         img_prefix=data_root, ## data root 위치
         classes = classes, ## classes 추가
         pipeline=test_pipeline),
