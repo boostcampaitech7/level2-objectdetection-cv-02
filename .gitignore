@@ -1,7 +1,11 @@
 ## 
 .flake8
 *.lock
+# dataset 디렉토리의 모든 내용을 무시
 dataset/*
+
+# labeling_make.ipynb 파일은 무시하지 않음
+!dataset/labeling_make.ipynb
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,python,windows
@@ -257,3 +261,16 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python,windows
+
+##ultralytics 실행으로 인해서 생길 수 있는 폴더 무시.
+#pt(pytorch) 무시
+baseline/ultralytics/**/*.pt
+
+# 모델 실행한 결과폴더 무시
+baseline/ultralytics/*runs/
+
+#test.csv 처럼 만든것들 무시
+baseline/ultralytics/*.csv
+
+runs/
+
