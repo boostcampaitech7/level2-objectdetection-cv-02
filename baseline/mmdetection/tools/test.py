@@ -5,6 +5,9 @@ import os.path as osp
 import time
 import warnings
 
+import pandas as pd
+from pycocotools.coco import COCO
+
 import mmcv
 import torch
 from mmcv import Config, DictAction
@@ -246,6 +249,31 @@ def main():
         outputs = multi_gpu_test(
             model, data_loader, args.tmpdir, args.gpu_collect
             or cfg.evaluation.get('gpu_collect', False))
+
+    # submission 양식에 맞게 output 후처리
+    prediction_strings = []
+    file_names = []
+    coco = COCO(cfg.data.test.ann_file)
+    # img_ids = coco.getImgIds()
+
+    class_num = 10
+    for i, out in enumerate(outputs):
+        prediction_string = ''
+        image_info = coco.loadImgs(coco.getImgIds(imgIds=i))[0]
+        for j in range(class_num):
+            for o in out[j]:
+                prediction_string += str(j) + ' ' + str(o[4]) + ' ' + str(o[0]) + ' ' + str(o[1]) + ' ' + str(
+                    o[2]) + ' ' + str(o[3]) + ' '
+            
+        prediction_strings.append(prediction_string)
+        file_names.append(image_info['file_name'])
+
+
+    submission = pd.DataFrame()
+    submission['PredictionString'] = prediction_strings
+    submission['image_id'] = file_names
+    submission.to_csv(os.path.join(cfg.work_dir, f'cascade_swin_1024.csv'), index=None)
+    submission.head()
 
     rank, _ = get_dist_info()
     if rank == 0:
