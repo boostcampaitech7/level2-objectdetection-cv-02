@@ -288,3 +288,4 @@ runs/
 #ultralytics/examples 에서 실행해서 생기는 파일들 무시
 baseline/ultralytics/examples/*
 baseline/ultralytics/recycling/*
+*.pt
