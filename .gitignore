@@ -289,3 +289,4 @@ runs/
 baseline/ultralytics/examples/*
 baseline/ultralytics/recycling/*
 *.pt
+.env
