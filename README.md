@@ -69,7 +69,7 @@
 
 |분류|내용|
   |-----|---|
-  |Models| **MMDetection**: CascadeRCNN, EfficientNet, DINO, DETR <br> **Detectron2**: Faster-RCNN, Retinanet, Cascade-rcnn <br>  **YOLO**: YOLOv11 ( s, l, xl 모델 크기 실험) |
+  |Models| **MMDetection**: CascadeRCNN, EfficientNet, DINO, DETR <br> **Detectron2**: Faster-RCNN, Retinanet, Cascade-rcnn <br>  **YOLO**: YOLOv11 ( s, l, xl) |
   |Augmentation| - Mosaic <br> - RandomCrop <br> - MixUp <br> - RandomBrightness <br> - RandomCropWithMinIoU <br> - ResizeWithAspectRatioClipping|
   |Ensemble|- Soft-NMS <br> - WBF |
 
