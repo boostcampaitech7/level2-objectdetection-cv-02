@@ -77,6 +77,12 @@
 <br><br>
 
 ## Result
+최종본은 가장 성능이 좋았던 모델들을 앙상블하여 구함.
+- cascade-rcnn-swin-L
+- DINO-base
+- DINO-resnet50
+
+### Score
 ||Public Dataset|Private Dataset|
 |---|-----|---|
 |Score| 0.6714 | 0.6558 |
